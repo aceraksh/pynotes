@@ -2,8 +2,8 @@
 title: Basics
 date: 2026-07-08
 author: Your Name
-cell_count: 7
-score: 5
+cell_count: 11
+score: 10
 ---
 
 ```python
@@ -81,9 +81,69 @@ else:
 
 
 ```python
+def add(a,b):
+    return a+b
+def multiply(a,b):
+    return a*b
+def division(a,b):
+    return a/b
+def subract(a,b):
+    return a-b
+print (add(2,3))
+print (add(2.3,0))
+print (multiply(12.3,4))
+
+```
+
+    5
+    2.3
+    49.2
+    
+
+
+```python
+def display_profile(**kwargs):
+    for k, value in kwargs.items():
+        print(f"{k}: {value}")
+
+display_profile(name="Alice", role="Engineer")
+```
+
+    name: Alice
+    role: Engineer
+    
+
+
+```python
+def complete_profile(*args, **kwargs):
+    print("Positional:", args)
+    print("Keyword:", kwargs)
+
+complete_profile("Python", level="Advanced", year=2025)
+```
+
+    Positional: ('Python',)
+    Keyword: {'level': 'Advanced', 'year': 2025}
+    
+
+
+```python
+def factorial(x):
+    if x == 0:
+        return 1
+    return x * factorial(x - 1)
+
+print(factorial(12))  
+```
+
+    479001600
+    
+
+
+```python
 
 ```
 
 
 ---
-**Score: 5**
+**Score: 10**
