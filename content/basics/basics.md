@@ -2,8 +2,8 @@
 title: Basics
 date: 2026-07-09
 author: Your Name
-cell_count: 23
-score: 20
+cell_count: 27
+score: 25
 ---
 
 ```python
@@ -303,9 +303,69 @@ outer()
 
 
 ```python
+for i in range(9):
+    a = i
+
+print(a)  # Accessible outside loop
+```
+
+    8
+    
+
+
+```python
+x = "Global"
+
+def outer():
+    x = "Enclosing"
+
+    def inner():
+        x = "Local"
+        print(x)
+    inner()
+    print(x)
+outer()
+print(x)
+```
+
+    Local
+    Enclosing
+    Global
+    
+
+
+```python
+value = 5
+
+def update():
+   value+= 1
+   print(value)
+```
+
+
+```python
+x = 100
+
+def outer():
+    def inner():
+        global x
+        x = 200
+    inner()
+    print(x)
+
+outer()
+print(x)
+```
+
+    200
+    200
+    
+
+
+```python
 
 ```
 
 
 ---
-**Score: 20**
+**Score: 25**
