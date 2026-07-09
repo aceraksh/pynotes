@@ -1,9 +1,9 @@
 ---
 title: Basics
-date: 2026-07-08
+date: 2026-07-09
 author: Your Name
-cell_count: 11
-score: 10
+cell_count: 23
+score: 20
 ---
 
 ```python
@@ -141,9 +141,171 @@ print(factorial(12))
 
 
 ```python
+sq = lambda x: x ** 2
+print(sq(97))  # Output: 25
+```
+
+    9409
+    
+
+
+```python
+def disp(name,age,department):
+    print(f"name:{name},age:{age},department:{department}")
+disp(name="raksh",department="cse",age=19)
+```
+
+    name:raksh,age:19,department:cse
+    
+
+
+```python
+def login(username, password):
+    print(f"User: {username}")
+
+login("admin", "1234")
+
+```
+
+    User: admin
+    
+
+
+```python
+def user(**details):
+    for key, value in details.items():
+        print(f"{key}: {value}")
+
+user(name="raksh", role="Developer", level="junior")
+user(name="raksh", role="Developer", level="junior")
+
+```
+
+    name: raksh
+    role: Developer
+    level: junior
+    name: raksh
+    role: Developer
+    level: junior
+    
+
+
+```python
+def full_profile(name, *skills, **info):
+    print("Name:", name)
+    print("Skills:", skills)
+    print("Details:", info)
+
+full_profile("Alice", "Python", "ML", age=30, city="Toronto")
+```
+
+    Name: Alice
+    Skills: ('Python', 'ML')
+    Details: {'age': 30, 'city': 'Toronto'}
+    
+
+
+```python
+def configure(mode="light"):
+    print(f"Mode: {mode}")
+
+configure(mode="dark")
+```
+
+    Mode: dark
+    
+
+
+```python
+def add(a,b,c):
+    return a+b+c
+values={"a":2,"b":12,"c":43}
+print(add(**values))
+```
+
+    57
+    
+
+
+```python
+count = 10
+
+def increment():
+    global count
+    count += 1
+
+increment()
+print(count)  # Output: 1
+```
+
+    11
+    
+
+
+```python
+val=12
+def local():
+    val=10
+    return 
+print(local())
+print(val)
+```
+
+    10
+    12
+    
+
+
+```python
+def outer():
+    message = "Hello"
+    def inner():
+        print(message)  
+    inner()
+outer()
+```
+
+
+```python
+def outer():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 9
+        print(count)
+    inner()
+outer()
+```
+
+    9
+    
+
+
+```python
+x = "Global"
+
+def outer():
+    x = "Enclosing"
+
+    def inner():
+        nonlocal x 
+        x= "Local"
+        print(x)
+
+    inner()
+
+outer()
+
+```
+
+    Local
+    
+
+
+```python
 
 ```
 
 
 ---
-**Score: 10**
+**Score: 20**
