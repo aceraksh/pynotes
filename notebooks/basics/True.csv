@@ -1,3 +1,2 @@
-Name,age,dept
-raksh,19,cse
-bob,19,cse
+Name|Age|dept
+Alice|25|cse

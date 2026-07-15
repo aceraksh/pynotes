@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Reverser</title>
+</head>
+
+<body>
+
+<h1>FastAPI Text Reverser</h1>
+
+<form action="/reverse" method="post">
+
+    <input type="text" name="text" placeholder="Enter text">
+
+    <button type="submit">
+        Reverse
+    </button>
+
+</form>
+
+{% if result %}
+
+<hr>
+
+<h2>Original Text</h2>
+<p>{{ original }}</p>
+
+<h2>Reversed Text</h2>
+<p>{{ result }}</p>
+
+{% endif %}
+
+</body>
+</html>

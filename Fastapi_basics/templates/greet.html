@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GET and POST Demo</title>
+</head>
+
+<body>
+
+<h1>Greeting App</h1>
+
+<form action="/greet" method="post">
+
+<input
+type="text"
+name="name"
+placeholder="Enter your name">
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
+{% if name %}
+
+<h2>Hello {{ name }}</h2>
+
+{% endif %}
+
+</body>
+
+</html>

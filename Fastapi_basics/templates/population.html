@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Population Finder</title>
+</head>
+
+<body>
+
+<h1>Population Finder</h1>
+
+<form action="/find" method="post">
+
+<input
+type="text"
+name="country"
+placeholder="Enter Country">
+
+<button type="submit">
+Find
+</button>
+
+</form>
+
+{% if population %}
+
+<hr>
+
+<h2>Country</h2>
+<p>{{ country }}</p>
+
+<h2>Population</h2>
+<p>{{ population }}</p>
+
+{% endif %}
+
+</body>
+
+</html>

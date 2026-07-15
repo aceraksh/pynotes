@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text File Upload</title>
+</head>
+
+<body>
+
+<h1>Upload a Text File</h1>
+
+<form action="/upload"
+      method="post"
+      enctype="multipart/form-data">
+
+<input
+type="file"
+name="file"
+accept=".txt">
+
+<br><br>
+
+<button type="submit">
+Upload
+</button>
+
+</form>
+
+{% if filename %}
+
+<hr>
+
+<h2>Filename</h2>
+
+<p>{{ filename }}</p>
+
+<h2>Content</h2>
+
+<pre>{{ text }}</pre>
+
+{% endif %}
+
+</body>
+
+</html>
